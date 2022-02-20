@@ -1,0 +1,286 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+body{
+    background-color: rgb(32, 15, 86);
+    color: #e5e5e5e7;
+    font-family: sans-serif;
+}
+
+svg{
+    width: 30px;
+    fill: white;
+}
+
+.search-bar{
+    margin: 10px 0px 20px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.search-bar input{
+    background-color: transparent;
+    font-size: 1rem;
+    width: 300px;
+    padding-left: 35px;
+    position: relative;
+}
+
+.search-bar svg{
+    position: absolute;
+    left: 10px;
+    width: 23px;
+    opacity: 0.7;
+    top: 35px;
+}
+
+.featured-playlists{
+    margin: 30px;
+    text-align: center;
+}
+
+nav{
+    background-color: rgb(20, 9, 54);
+    height: 100vh;
+    padding-left: 20px;
+    padding-top: 70px;
+    font-weight: bold;
+    width: 320px;
+    position: fixed;
+    left: -320px;
+    top: 0;
+}
+
+nav a{
+    text-decoration: none;
+}
+
+nav ul{
+    list-style: none;
+    line-height: 50px;
+}
+
+nav svg{
+    margin-right: 10px;
+}
+
+.open-menu{
+    position: fixed;
+    left: 20px;
+    top: 125px;
+    background: grey;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.close-menu{
+    position: absolute;
+    right: 20px;
+    top: 100px;
+    cursor: pointer;
+}
+
+.open-menu svg{
+    fill: black;
+    opacity: 1;
+}
+
+.profile{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 100px;
+}
+
+.profile img{
+    width: 120px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.wrap-profile{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0px 0px 20px;
+    opacity: 0.4;
+}
+
+.wrap-profile p,svg{
+    cursor: pointer;
+}
+
+.wrap-profile p,svg :hover{
+   fill: white;
+}
+
+.wrap-profile p:hover{
+    color: white;
+}
+
+.edit-profile{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.15rem;
+    margin-top: 13px;
+    opacity: 0.7;
+}
+
+.edit-profile svg{
+    width: 25px;
+    margin-left: 20px;
+}
+
+.options{
+    height: 500px;
+    margin-top: 10px;
+    opacity: 0.5;
+}
+
+.options a:hover{
+    opacity: 1;
+}
+
+hr{
+    border: 2px solid #e5e5e5e7;
+    width: 250px;
+    margin: 30px 0 30px;
+}
+
+.gallery{
+    width: 320px;
+    height: fit-content;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    margin-left: -45px;
+    text-align: left;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.gallery img{
+    width: 280px;
+    margin-bottom: 10px;
+    padding: 0 10px 0;
+}
+
+.gallery p{
+    opacity: 0.7;
+}
+
+.profile-views{
+    padding-left: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+}
+
+.profiles{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: justify;
+    margin-top: 30px;
+}
+
+.profiles p:first-child{
+    padding-left: 10px;
+    width: max-content;
+    padding-top: 20px;
+}
+
+.profiles p:last-child{
+    padding-left: 10px;
+    text-align: start;
+    width: max-content;
+    opacity: 0.7;
+}
+
+.singer-last-seen img{
+    width: 80px;
+    border-radius: 10px;
+}
+
+.albums{
+    width: fit-content;
+    margin-right: 20px;
+    line-height: 80px;
+    padding-top: 40px;
+    opacity: 0.7;
+}
+
+.tracks-scroll{
+    padding-top: 70px;
+    padding-left: 20px;
+    overflow-x: auto;
+}
+
+.tracks-content{
+    display: flex;
+    flex-direction: row;
+    height: max-content;
+    width: max-content;
+    padding-top: 20px;
+}
+
+.tracks-content div{
+    height: 290px;
+}
+
+.tracks-content figure{
+    margin: 0 20px 10px 0;
+    width: 170px;
+    height: 170px;
+    background-size:cover;
+    border-radius: 10px;
+}
+
+.album01{
+    background-image: url(./assets/track1.jpg);
+}
+
+.album02{
+    background-image: url(./assets/track2.jpg);
+}
+
+.album03{
+    background-image: url(./assets/track3.jpg);
+}
+
+.album04{
+    background-image: url(./assets/track4.jpg);
+}
+
+.album05{
+    background-image: url(./assets/track5.jpg);
+}
+
+.album06{
+    background-image: url(./assets/track6.jpg);
+}
+
+.album07{
+    background-image: url(./assets/track7.jpg);
+}
+
+.tracks-content p{
+   margin-top: 20px;
+   font-size: 1.2rem;
+}
+
+.tracks-content p:last-child{
+    opacity: 0.7;
+ }
+ 
