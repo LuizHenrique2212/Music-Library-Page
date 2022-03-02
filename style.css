@@ -10,21 +10,21 @@ html, body{
 }
 
 body{
-    background-image: linear-gradient(to right, #101328 , #1e1733);
-    font-family: sans-serif;
-    
+    background: linear-gradient(to right, #101328 , #322657);
+    font-family: sans-serif; 
+    scrollbar-width: thin;
+    scrollbar-color:#351796 rgb(47, 37, 82) ;
 }
 
-::-webkit-scrollbar{
-    height: 10px;
+ ::-webkit-scrollbar{
     background: rgb(47, 37, 82);
+    height: 7px;
     border-radius: 20px;
 }
 
 ::-webkit-scrollbar-thumb{
     background-color: #351796;
     border-radius: 20px;
-    width: 100px;
 }
 
 svg{
@@ -32,7 +32,6 @@ svg{
 }
 
 .search-bar{
-    width: 320px;
     height: max-content;
     margin-top: 40px;
     text-align: center;
@@ -64,15 +63,14 @@ svg{
 
 nav{
     background-color: #040517;
-    height: 100vh;
-    /* overflow-y:scroll ; */
+    height: 100%;
     padding-left: 20px;
     padding-top: 70px;
     font-weight: bold;
-    width: 320px;
+    width: fit-content;
     position: fixed;
-    left: -320px;
-    top: 0;
+    left: -100vw;
+    color: white;
 }
 
 nav a{
@@ -189,16 +187,21 @@ hr{
 .gallery{
     height: fit-content;
     margin-top: 30px;
+    margin-right: 20px;
+    margin-left: 20px;
     padding-bottom: 30px;
     display: flex;
     flex-direction: row;
+    justify-content: space-around;
     overflow-x: scroll;
     text-align: left;
 }
 
 .gallery img{
-    width: 280px;
-    height: 187px;
+    min-width: 280px;
+    width: 17vw;
+    min-height: 187px;
+    height: 12.5vh;
     margin-bottom: 10px;
     margin: 0 10px 0;
 }
@@ -214,12 +217,14 @@ hr{
 
 .singer-last-seen{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 30vw 30vw 50vw;
     color: white;
 }
 
 .singer-last-seen img{
-    width: 80px;
+    min-width: 80px;
+    width: 9vw;
+    max-width: 140px;
     border-radius: 10px;
 }
 
@@ -228,15 +233,18 @@ hr{
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 500px;
+    min-height: 500px;
+    height: 45vh;
 }
 
 .profile-text{
     display: flex;
     flex-direction: column;
-    text-align: justify;
+    text-align: center;
     justify-content: space-around;
-    height: 500px;
+    min-height: 500px;
+    height: 45vh;
+    
 }
 
 .opaque{
@@ -248,7 +256,8 @@ hr{
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 500px;
+    min-height: 500px;
+    height: 45vh;
     padding-right: 20px;
     opacity: 0.5;
     font-size: 0.8rem;
@@ -260,6 +269,8 @@ hr{
     overflow-x: scroll;
     color: white;
     margin-bottom: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .tracks-scroll h2{
@@ -270,8 +281,9 @@ hr{
     display: flex;
     flex-direction: row;
     height: max-content;
-    width: max-content;
+    justify-content: space-around;
     padding-top: 20px;
+    margin: 0 10px;
 }
 
 .tracks-content div{
@@ -320,5 +332,45 @@ hr{
 }
 
 .tracks-content p:last-child{
-    opacity: 0.7;
+    opacity: 0.5;
+}
+
+@media (min-width: 375px) {
+    h1, h2{
+        font-size: 1.3em;
+    }
+
+    p{
+        font-size: 1.1em;
+    }
+}
+
+@media (min-width: 768px) {
+    h1, h2, h3{
+        font-size: 1.5em;
+    } 
+
+    p{
+        font-size: 1.3em;
+    }
+}
+
+@media (min-width: 1024px) {
+    h1, h2, h3{
+        font-size: 1.5em;
+    }
+
+    p{
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1400px) {
+    h1, h2, h3{
+        font-size: 1.8em;
+    }
+
+    p{
+        font-size: 1.8em;
+    }
 }
