@@ -179,31 +179,28 @@ hr{
 }
 
 .featured-playlists{
-    margin: 30px 10px;
+    margin: 30px 0px;
     text-align: center;
     color: white;
 }
 
 .gallery{
-    height: fit-content;
-    margin-top: 30px;
-    margin-right: 20px;
-    margin-left: 20px;
-    padding-bottom: 30px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    margin: 10px;
     overflow-x: scroll;
+}
+
+.gallery div{
     text-align: left;
+    margin-bottom: 25px;
+    margin: 15px 20px 25px;
 }
 
 .gallery img{
-    min-width: 280px;
-    width: 17vw;
-    min-height: 187px;
-    height: 12.5vh;
-    margin-bottom: 10px;
-    margin: 0 10px 0;
+    width: 255px;
+    height: 170px;
+    margin-bottom: 30px;
+    border-radius: 15px;
 }
 
 .gallery p{
@@ -343,6 +340,23 @@ hr{
     p{
         font-size: 1.1em;
     }
+
+    .gallery img{
+        width: 320px;
+        height: 214px;
+        transition: transform .2s;
+    }
+    
+    .gallery img:hover{
+        transform: scale(1.1);
+    }
+}
+
+@media (min-width: 400px) {
+    .gallery img{
+        width: 270px;
+        height: 180px;
+    }
 }
 
 @media (min-width: 768px) {
@@ -352,6 +366,16 @@ hr{
 
     p{
         font-size: 1.3em;
+    }
+
+    .gallery img{
+        width: 300px;
+        height: 200px;
+        opacity: 0.5;
+    }
+    
+    .gallery img:hover{
+        opacity: 1;
     }
 }
 
@@ -363,6 +387,11 @@ hr{
     p{
         font-size: 1.5em;
     }
+
+    .gallery img{
+        width: 400px;
+        height: 267px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -372,5 +401,35 @@ hr{
 
     p{
         font-size: 1.8em;
+    }
+
+    .gallery img{
+        width: 500px;
+        height: 334px;
+    }
+
+    .gallery div{
+        margin-right: 70px;
+        margin-left: 70px;
+    }
+}
+
+@media (min-width: 1900px) {
+    h1, h2, h3{
+        font-size: 1.9em;
+    }
+
+    p{
+        font-size: 1.9em;
+    }
+
+    .gallery img{
+        width: 550px;
+        height: 367px;
+    }
+
+    .gallery div{
+        margin-right: 100px;
+        margin-left: 100px;
     }
 }
