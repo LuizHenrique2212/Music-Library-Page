@@ -3,17 +3,21 @@
     padding: 0;
     border: none;
     box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 html, body{
     overflow-x: hidden;
+    height: 100%;
 }
 
 body{
     background: linear-gradient(to right, #101328 , #322657);
     font-family: sans-serif; 
     scrollbar-width: thin;
-    scrollbar-color:#351796 rgb(47, 37, 82) ;
+    scrollbar-color:#351796 rgb(47, 37, 82);
+    color: white;
 }
 
  ::-webkit-scrollbar{
@@ -29,6 +33,7 @@ body{
 
 svg{
     width: 30px;
+    fill: white;
 }
 
 .search-bar{
@@ -36,9 +41,9 @@ svg{
     margin-top: 40px;
     text-align: center;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
 }
 
 .search-bar input{
@@ -61,31 +66,87 @@ svg{
     padding-right: 10px;
 }
 
-nav{
+nav {
     background-color: #040517;
-    height: 100%;
     padding-left: 20px;
     padding-top: 70px;
     font-weight: bold;
-    width: fit-content;
+    height: 110%;
     position: fixed;
-    left: -100vw;
     color: white;
 }
 
+.profile{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 70px;
+    color: white;
+}
+
+.profile img{
+    width: 120px;
+    border-radius: 20px;
+    margin-top: 40px;
+}
+
+.wrap-profile{
+    display: flex;
+    flex-direction: column;
+    padding: 80px 0px 0px 20px;
+}
+
+.wrap-profile p,svg{
+    cursor: pointer;
+}
+
+.edit-profile{
+    display: flex;
+    flex-direction: row;
+    font-size: 1.15rem;
+    margin-top: 8px;
+    opacity: 0.7;
+}
+
+.edit-profile:hover{
+    opacity: 1;
+}
+
+.edit-profile svg{
+    width: 25px;
+    margin-left: 10px;
+}
+
 nav a{
-    text-decoration: none;
     color: white;
 }
 
 nav ul{
-    list-style: none;
     line-height: 50px;
 }
 
 nav svg{
     margin-right: 10px;
+}
+
+.options{
+    height: 500px;
+    margin-top: 10px;
+}
+
+hr{
+    border: 2px solid #e5e5e5e7;
+    width: 250px;
+    margin: 30px 0 30px;
+}
+
+.close-menu{
+    position: absolute;
+    right: 30px;
+    top: 40px;
+    cursor: pointer;
     fill: white;
+    width: 40px;
+    height: 40px;
 }
 
 .open-menu{
@@ -101,81 +162,6 @@ nav svg{
     display: flex;
     justify-content: center;
     opacity: 0.5;
-}
-
-.open-menu:hover{
-     cursor: pointer;
-     opacity: 1;
-}
-
-.close-menu{
-    position: absolute;
-    right: 20px;
-    top: 30px;
-    cursor: pointer;
-    fill: white;
-    width: 50px;
-    height: 50px;
-}
-
-.profile{
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 100px;
-}
-
-.profile img{
-    width: 120px;
-    border-radius: 20px;
-    margin-top: 40px;
-}
-
-.wrap-profile{
-    display: flex;
-    flex-direction: column;
-    padding: 80px 0px 0px 20px;
-    opacity: 0.4;
-}
-
-.wrap-profile p,svg{
-    cursor: pointer;
-}
-
-.wrap-profile p,svg :hover{
-   fill: white;
-}
-
-.wrap-profile p:hover{
-    color: white;
-}
-
-.edit-profile{
-    display: flex;
-    flex-direction: row;
-    font-size: 1.15rem;
-    margin-top: 13px;
-    opacity: 0.7;
-}
-
-.edit-profile svg{
-    width: 25px;
-    margin-left: 20px;
-}
-
-.options{
-    height: 500px;
-    margin-top: 10px;
-    opacity: 0.5;
-}
-
-.options a:hover{
-    opacity: 1;
-}
-
-hr{
-    border: 2px solid #e5e5e5e7;
-    width: 250px;
-    margin: 30px 0 30px;
 }
 
 .featured-playlists{
@@ -278,7 +264,6 @@ hr{
     display: flex;
     flex-direction: row;
     height: max-content;
-    justify-content: space-around;
     padding-top: 20px;
     margin: 0 10px;
 }
@@ -332,6 +317,7 @@ hr{
     opacity: 0.5;
 }
 
+
 @media (min-width: 375px) {
     h1, h2{
         font-size: 1.3em;
@@ -352,7 +338,7 @@ hr{
     }
 }
 
-@media (min-width: 400px) {
+ @media (min-width: 400px) {
     .gallery img{
         width: 270px;
         height: 180px;
@@ -379,6 +365,29 @@ hr{
     }
 }
 
+/*
+@media (min-width: 1000px) {
+    nav{
+        left: 0;
+        opacity: 1;
+        position:absolute;
+        height: 100%;
+    }
+
+    .open-menu{
+        display: none;
+    }
+
+    .close-menu{
+        display: none;
+    }
+
+    body{
+        display: flex;
+    }
+
+}
+
 @media (min-width: 1024px) {
     h1, h2, h3{
         font-size: 1.5em;
@@ -392,6 +401,8 @@ hr{
         width: 400px;
         height: 267px;
     }
+
+    
 }
 
 @media (min-width: 1400px) {
@@ -432,4 +443,4 @@ hr{
         margin-right: 100px;
         margin-left: 100px;
     }
-}
+} */
