@@ -71,9 +71,11 @@ nav {
     padding-left: 20px;
     padding-top: 70px;
     font-weight: bold;
-    height: 110%;
-    position: fixed;
+    height: 135%;
+    position: absolute;
     color: white;
+    overflow: auto;
+    top: 0;
 }
 
 .profile{
@@ -162,6 +164,7 @@ hr{
     display: flex;
     justify-content: center;
     opacity: 0.5;
+    z-index: 1;
 }
 
 .featured-playlists{
@@ -365,15 +368,8 @@ hr{
     }
 }
 
-/*
-@media (min-width: 1000px) {
-    nav{
-        left: 0;
-        opacity: 1;
-        position:absolute;
-        height: 100%;
-    }
 
+@media (min-width: 1000px) {
     .open-menu{
         display: none;
     }
@@ -382,8 +378,68 @@ hr{
         display: none;
     }
 
-    body{
+    .search-bar{
+        justify-content: start;
+        margin-left: 50px;
+    }
+
+    h1{
+        text-align: left;
+        margin-left: 50px;
+    }
+
+    nav {
+        display: block;
+        position:unset;
+        opacity: 1;
+        width: 350px;
+        height: 100%;
+    }
+
+    .gallery{
+        width: 70%;
+        margin-left: 30px;
+    }
+
+    .container{
+        display:grid;
+        grid-template-columns:auto auto;
+        overflow: auto;
+    }
+
+    main{
         display: flex;
+        flex-direction: row;
+    }
+
+    .profile-views{
+        text-align: center;
+        color: white;
+    }
+    
+    .singer-last-seen{
+        display: grid;
+        grid-template-columns: 200px 200px 200px;
+        column-gap: 10px;
+        color: white;
+    }
+
+    .artist-heard{
+        align-items: end;
+    }
+
+    .profile-text{
+        text-align: left;
+        opacity: 0.5;
+    }
+
+    .tracks-scroll{
+        margin-left: 100px;
+        width: 700px;
+    }
+
+    .tracks-scroll h2{
+        text-align: left;
     }
 
 }
@@ -404,7 +460,7 @@ hr{
 
     
 }
-
+/*
 @media (min-width: 1400px) {
     h1, h2, h3{
         font-size: 1.8em;
