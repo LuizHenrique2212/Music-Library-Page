@@ -1,18 +1,3 @@
-<!-- Search artists, playlists or tracks
-Dany Schudler
-Edit Profile
-Overview
-News
-Playlists
-Discover
-Dashboard
-Messages
-Notifications
-Account
-Featured Playlists
-Profile Views
-Tracks -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,13 +11,16 @@ Tracks -->
 </head>
 
 <body>
+    <!-- Div que engloba todo o conteúdo -->
     <div class="container">
+
         <!-- Menu lateral -->
         <nav class="menu-options">
             <svg class="close-menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
                 <path
                     d="M376.6 427.5c11.31 13.58 9.484 33.75-4.094 45.06c-5.984 4.984-13.25 7.422-20.47 7.422c-9.172 0-18.27-3.922-24.59-11.52L192 305.1l-135.4 162.5c-6.328 7.594-15.42 11.52-24.59 11.52c-7.219 0-14.48-2.438-20.47-7.422c-13.58-11.31-15.41-31.48-4.094-45.06l142.9-171.5L7.422 84.5C-3.891 70.92-2.063 50.75 11.52 39.44c13.56-11.34 33.73-9.516 45.06 4.094L192 206l135.4-162.5c11.3-13.58 31.48-15.42 45.06-4.094c13.58 11.31 15.41 31.48 4.094 45.06l-142.9 171.5L376.6 427.5z" />
             </svg>
+
             <!-- Profile -->
             <div class="profile">
                 <img src="./assets/profile.jpg" alt="profile picture">
@@ -49,8 +37,10 @@ Tracks -->
                 </div>
             </div>
 
-            <!-- Menu options -->
+            <!-- Opções do menu -->
             <section class="options">
+
+                <!-- Opções de cima -->
                 <div class="top-options">
                     <ul>
                         <li class="overview">
@@ -89,6 +79,7 @@ Tracks -->
 
                 <hr>
 
+                <!-- Opções de baixo -->
                 <div class="bottom-options">
                     <ul>
                         <li class="dashboard">
@@ -126,8 +117,12 @@ Tracks -->
                 </div>
             </section>
         </nav>
+
+        <!-- Div que engloba o conteúdo sem o menu lateral -->
         <div class="page">
             <header>
+
+                <!-- Barra de busca -->
                 <div class="search-bar">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="30px">
                         <path
@@ -137,6 +132,7 @@ Tracks -->
                 </div>
             </header>
 
+            <!-- Botão de abrir o menu -->
             <div class="open-menu">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     <path
@@ -144,6 +140,7 @@ Tracks -->
                 </svg>
             </div>
 
+            <!-- Listas de reprodução em destaque -->
             <section class="featured-playlists">
                 <h1>Featured Playlists</h1>
                 <div class="gallery">
@@ -171,6 +168,8 @@ Tracks -->
             </section>
 
             <main>
+
+                <!-- Músicas que o perfil escutou -->
                 <section class="profile-views">
                     <h2>Profiel Views</h2>
                     <div class="singer-last-seen">
@@ -204,6 +203,8 @@ Tracks -->
                 </section>
 
                 <section class="tracks-scroll">
+
+                    <!-- Algumas faixas -->
                     <h2>Tracks</h2>
                     <div class="tracks-content">
                         <div>

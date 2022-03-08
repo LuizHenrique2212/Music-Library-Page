@@ -6,7 +6,7 @@ openMenu.onclick = function () {
     navBar.style.display = 'block';
     navBar.style.zIndex = '1';
     openMenu.style.display = 'none';
-};
+}
 
 closeMenu.onclick = function () {
     navBar.style.display = 'none';
