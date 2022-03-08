@@ -71,11 +71,12 @@ nav {
     padding-left: 20px;
     padding-top: 70px;
     font-weight: bold;
-    height: 135%;
+    height: 100%;
     position: absolute;
     color: white;
     overflow: auto;
     top: 0;
+    display: none;
 }
 
 .profile{
@@ -252,7 +253,6 @@ hr{
 .tracks-scroll{
     padding-top: 70px;
     padding-left: 20px;
-    overflow-x: scroll;
     color: white;
     margin-bottom: 50px;
     margin-right: 20px;
@@ -269,6 +269,7 @@ hr{
     height: max-content;
     padding-top: 20px;
     margin: 0 10px;
+    overflow-x: scroll;    
 }
 
 .tracks-content div{
@@ -320,7 +321,6 @@ hr{
     opacity: 0.5;
 }
 
-
 @media (min-width: 375px) {
     h1, h2{
         font-size: 1.3em;
@@ -333,15 +333,32 @@ hr{
     .gallery img{
         width: 320px;
         height: 214px;
+    }
+
+
+    img{
         transition: transform .2s;
     }
-    
-    .gallery img:hover{
+
+    img:hover{
         transform: scale(1.1);
     }
+
+    .profile img:hover{
+        transform: none;
+    }
+
+    figure{
+        transition: transform .2s;
+    }
+
+    figure:hover{
+        transform: scale(1.1);
+    }
+
 }
 
- @media (min-width: 400px) {
+@media (min-width: 400px) {
     .gallery img{
         width: 270px;
         height: 180px;
@@ -368,7 +385,6 @@ hr{
     }
 }
 
-
 @media (min-width: 1000px) {
     .open-menu{
         display: none;
@@ -376,6 +392,12 @@ hr{
 
     .close-menu{
         display: none;
+    }
+
+    .container{
+        display: grid;
+        grid-template-columns: 350px 60vw;
+        height: 100%;
     }
 
     .search-bar{
@@ -390,38 +412,30 @@ hr{
 
     nav {
         display: block;
-        position:unset;
-        opacity: 1;
-        width: 350px;
-        height: 100%;
+        position: static;
+    }
+
+    .featured-playlists {
+        margin: 30px 0px;
+        text-align: center;
+        color: white;
+        width: 100%
     }
 
     .gallery{
-        width: 70%;
-        margin-left: 30px;
-    }
-
-    .container{
-        display:grid;
-        grid-template-columns:auto auto;
-        overflow: auto;
+        margin: 20px;
     }
 
     main{
-        display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
-    .profile-views{
-        text-align: center;
-        color: white;
+    .profile-views h2{
+        margin-top: 50px;
     }
     
     .singer-last-seen{
-        display: grid;
-        grid-template-columns: 200px 200px 200px;
-        column-gap: 10px;
-        color: white;
+        grid-template-columns: 1fr 1fr 2fr;
     }
 
     .artist-heard{
@@ -434,8 +448,7 @@ hr{
     }
 
     .tracks-scroll{
-        margin-left: 100px;
-        width: 700px;
+        width: 100%;
     }
 
     .tracks-scroll h2{
@@ -460,7 +473,7 @@ hr{
 
     
 }
-/*
+
 @media (min-width: 1400px) {
     h1, h2, h3{
         font-size: 1.8em;
@@ -469,34 +482,66 @@ hr{
     p{
         font-size: 1.8em;
     }
+    
+    .container{
+        grid-template-columns: 350px 70vw;
+    }
+
+    .featured-playlists {
+        margin: 30px 0px;
+    }
+
+    .artist-heard {
+        align-items: start;
+    }
 
     .gallery img{
         width: 500px;
         height: 334px;
     }
 
-    .gallery div{
-        margin-right: 70px;
-        margin-left: 70px;
+    .tracks-scroll{
+        padding-top: 0;
     }
+
 }
 
-@media (min-width: 1900px) {
-    h1, h2, h3{
-        font-size: 1.9em;
+@media (min-width: 1650px) {
+    main{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
     }
 
-    p{
-        font-size: 1.9em;
+    .singer-last-seen {
+        grid-template-columns: 1fr 2fr 2.5fr;
+        grid-column-gap: 30px;
+        padding-left: 50px;
+        height: 500px;
     }
 
-    .gallery img{
-        width: 550px;
-        height: 367px;
+    .singer-last-seen img {
+         max-width: 80px;
     }
 
-    .gallery div{
-        margin-right: 100px;
-        margin-left: 100px;
+    .profiles-imgs {
+        justify-content: space-evenly;
+        height: 300px;
     }
-} */
+
+    .profile-text {
+        justify-content: space-evenly;
+        height: 300px;
+    }
+
+    .artist-heard {
+        align-items: end;
+        justify-content: space-evenly;
+        height: 300px;
+    }
+
+    .tracks-scroll {
+        width: 50%;
+    }
+}
